@@ -1,5 +1,6 @@
 package com.pdevelopers.instaclone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -92,6 +93,14 @@ public class MainActivity extends AppCompatActivity{
                             }
                         }
                     });
+                }
+            });
+            nextBtn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent obj = new Intent(MainActivity.this, SignUp.class);
+                    startActivity(obj);
+                    finish();
                 }
             });
         }catch(Exception e){
